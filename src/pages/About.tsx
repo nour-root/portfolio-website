@@ -31,7 +31,7 @@ export default function About() {
       </div>
       <div className="w-full flex gap-20 justify-center items-start">
         <img
-          src={`/public/images/aiony-haust-3TLl_97HNJo-unsplash.jpg`}
+          src={`/images/aiony-haust-3TLl_97HNJo-unsplash.jpg`}
           className={`min-w-[400px] h-[538px] rounded-4xl`}
           alt=""
         />

@@ -10,7 +10,7 @@ export default function Home() {
     >
       <div className="w-full flex flex-col items-center justify-center gap-2">
         <img
-          src={`/public/images/aiony-haust-3TLl_97HNJo-unsplash.jpg`}
+          src={`/images/aiony-haust-3TLl_97HNJo-unsplash.jpg`}
           alt=""
           className="w-[158px] h-[158px] rounded-full object-cover"
         />
