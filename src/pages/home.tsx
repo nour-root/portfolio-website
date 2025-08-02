@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="w-full flex flex-col gap-5 items-center p-10 text-center"
+      className="w-full flex flex-col gap-5 items-center p-24 text-center"
     >
       <div className="w-full flex flex-col items-center justify-center gap-2">
         <img
-          src="/src/assets/images/aiony-haust-3TLl_97HNJo-unsplash.jpg"
+          src={`/public/images/aiony-haust-3TLl_97HNJo-unsplash.jpg`}
           alt=""
           className="w-[158px] h-[158px] rounded-full object-cover"
         />

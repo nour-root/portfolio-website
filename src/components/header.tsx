@@ -3,10 +3,20 @@ import { CiMenuFries } from "react-icons/ci";
 import { PiSunDimLight } from "react-icons/pi";
 import { useModeAnimation } from "react-theme-switch-animation";
 import { Link } from "react-router";
-
+import { useLocation } from "react-router";
+import { useEffect } from "react";
 export default function Header() {
   const { ref, toggleSwitchTheme, isDarkMode } = useModeAnimation();
-
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      const id = hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
   return (
     <header className="px-20 max-md:px-6 py-4 relative z-0 flex items-center justify-between">
       <div className="h-fit w-fit relative">
@@ -23,18 +33,20 @@ export default function Header() {
             isDarkMode ? "border" : ""
           } gap-10 bg-background rounded-[100px] w-full flex items-center justify-between capitalize px-10 py-4`}
         >
-          <Link to={`#home`}>
+          <Link to={`/#home`}>
             <li
               className={`relative cursor-pointer z-0 before:absolute before:w-[calc(100%+20px)] before:h-full before:bg-transparent before:-z-10 before:-left-2 before:rounded-2xl before:blur-[9px] before:transition-all before:duration-200 hover:before:bg-accent `}
             >
               Home
             </li>
           </Link>
-          <li
-            className={`relative cursor-pointer z-0 before:absolute before:w-[calc(100%+20px)] before:h-full before:bg-transparent before:-z-10 before:-left-2 before:rounded-2xl before:blur-[9px] before:transition-all before:duration-200 hover:before:bg-accent `}
-          >
-            about me
-          </li>
+          <Link to={`/#about`}>
+            <li
+              className={`relative cursor-pointer z-0 before:absolute before:w-[calc(100%+20px)] before:h-full before:bg-transparent before:-z-10 before:-left-2 before:rounded-2xl before:blur-[9px] before:transition-all before:duration-200 hover:before:bg-accent `}
+            >
+              about me
+            </li>
+          </Link>
           <li
             className={`relative cursor-pointer z-0 before:absolute before:w-[calc(100%+20px)] before:h-full before:bg-transparent before:-z-10 before:-left-2 before:rounded-2xl before:blur-[9px] before:transition-all before:duration-200 hover:before:bg-accent `}
           >
