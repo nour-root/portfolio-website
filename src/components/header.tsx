@@ -5,9 +5,12 @@ import { useModeAnimation } from "react-theme-switch-animation";
 import { Link } from "react-router";
 import { useLocation } from "react-router";
 import { useEffect } from "react";
+import { btnMenu } from "@/Contexts";
+import { useAtom } from "jotai";
 export default function Header() {
   const { ref, toggleSwitchTheme, isDarkMode } = useModeAnimation();
   const { hash } = useLocation();
+  const [hidden, setHidden] = useAtom(btnMenu);
   useEffect(() => {
     if (hash) {
       const id = hash.replace("#", "");
@@ -17,6 +20,9 @@ export default function Header() {
       }
     }
   }, [hash]);
+  function handleClickMenu() {
+    setHidden(!hidden);
+  }
   return (
     <header className="px-20 max-md:px-6 py-4 relative z-0 flex items-center justify-between">
       <div className="h-fit w-fit relative">
@@ -76,7 +82,10 @@ export default function Header() {
             />
           )}
         </button>
-        <CiMenuFries className="md:hidden text-[25px] text-foreground" />
+        <CiMenuFries
+          className="md:hidden text-[25px] text-foreground cursor-pointer"
+          onClick={handleClickMenu}
+        />
       </div>
       <div className="absolute max-md:hidden w-[20%] h-[114px] rounded-full -top-8 left-[42.5%] blur-2xl bg-secondary -z-10"></div>
     </header>
