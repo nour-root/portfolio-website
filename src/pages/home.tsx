@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="w-full flex flex-col gap-5 items-center p-24 text-center"
+      className="w-full flex flex-col gap-5 items-center py-20 px-24 text-center"
     >
       <div className="w-full flex flex-col items-center justify-center gap-2">
         <img

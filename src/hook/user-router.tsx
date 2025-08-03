@@ -8,7 +8,9 @@ const useRouter = () => {
     {
       path: "/",
       element: <Layout />,
-      children: [{ index: true, element: [<Home />, <About />] }],
+      children: [
+        { index: true, element: [<Home key={1} />, <About key={2} />] },
+      ],
     },
   ]);
 };
