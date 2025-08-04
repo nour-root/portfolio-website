@@ -24,7 +24,7 @@ export default function About() {
     },
   ];
   return (
-    <section id="about" className={`text-foreground py-20 px-24 space-y-16`}>
+    <section id="about" className={`text-foreground py-20 px-24  space-y-16`}>
       <div className={`w-full text-center font-ovo space-y-3`}>
         <p className="text-2xl">Introduction</p>
         <p className={`text-6xl font-normal`}>About me</p>
@@ -36,7 +36,7 @@ export default function About() {
           alt=""
         />
         <div className={`text-left space-y-12`}>
-          <p className=" mx-auto text-xl font-ovo leading-10">
+          <p className=" mx-auto text-xl font-ovo leading-10 max-md:text-lg">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Praesentium perspiciatis voluptate voluptates id reiciendis in,
             illum repudiandae laboriosam, beatae ab temporibus deleniti qui
