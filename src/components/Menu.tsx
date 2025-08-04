@@ -11,7 +11,7 @@ export default function Menu() {
   }
   return (
     <div
-      className={`fixed w-full h-full bg-black/50 top-0 right-0 ${
+      className={`fixed w-full h-full bg-black/50 top-0 right-0 z-50 ${
         hidden
           ? "opacity-0 pointer-events-none transition-all duration-200"
           : "opacity-100"

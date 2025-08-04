@@ -4,13 +4,25 @@ import { PiSunDimLight } from "react-icons/pi";
 import { useModeAnimation } from "react-theme-switch-animation";
 import { Link } from "react-router";
 import { useLocation } from "react-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { btnMenu } from "@/Contexts";
 import { useAtom } from "jotai";
+import { motion, useScroll, useMotionValueEvent } from "motion/react";
+import { useRef } from "react";
 export default function Header() {
   const { ref, toggleSwitchTheme, isDarkMode } = useModeAnimation();
+  const refHeader = useRef(null);
+  const [isFixed, setIsFixed] = useState(false);
   const { hash } = useLocation();
   const [hidden, setHidden] = useAtom(btnMenu);
+  const { scrollYProgress } = useScroll({
+    target: refHeader,
+    offset: ["end start", "end start"],
+  });
+  useMotionValueEvent(scrollYProgress, "change", (progress) => {
+    setIsFixed(progress >= 1);
+  });
+
   useEffect(() => {
     if (hash) {
       const id = hash.replace("#", "");
@@ -24,20 +36,27 @@ export default function Header() {
     setHidden(!hidden);
   }
   return (
-    <header className="px-20 max-md:px-6 py-4 relative z-0 flex items-center justify-between">
+    <motion.header
+      ref={refHeader}
+      className={` ${
+        isFixed
+          ? "fixed w-full top-0 left-0 bg-background/50 backdrop-blur-xl z-50"
+          : "relative"
+      } px-20 max-md:px-6 py-2  z-0 flex items-center justify-between`}
+    >
       <div className="h-fit w-fit relative">
         <p className="text-foreground capitalize font-semibold text-[45px]">
           nour
         </p>
         <div
-          className={`absolute bg-primary  -right-2 top-[42px] w-[10px] h-[10px] rounded-full`}
+          className={`absolute bg-primary -right-2 top-[42px] w-[10px] h-[10px] rounded-full`}
         ></div>
       </div>
       <div className="min-w-[33.3%] h-fit flex items-center justify-center max-md:hidden">
         <ul
-          className={`font-ovo text-foreground ${
-            isDarkMode ? "border" : ""
-          } gap-10 bg-background rounded-[100px] w-full flex items-center justify-between capitalize px-10 py-4`}
+          className={`font-ovo text-foreground ${isDarkMode ? "border" : ""} ${
+            isFixed ? "bg-transparent border-0" : "bg-background"
+          } gap-10 rounded-[100px] w-full flex items-center justify-between capitalize px-10 py-4`}
         >
           <Link to={`/#home`}>
             <li
@@ -74,7 +93,7 @@ export default function Header() {
         >
           {isDarkMode ? (
             <PiSunDimLight
-              className={`text-2xl cursor-pointer text-foreground `}
+              className={`text-2xl cursor-pointer text-foreground`}
             />
           ) : (
             <PiMoonLight
@@ -87,7 +106,11 @@ export default function Header() {
           onClick={handleClickMenu}
         />
       </div>
-      <div className="absolute max-md:hidden w-[20%] h-[114px] rounded-full -top-8 left-[42.5%] blur-2xl bg-secondary -z-10"></div>
-    </header>
+      <div
+        className={`absolute max-md:hidden w-[20%] h-[114px] rounded-full -top-8 left-[42.5%] blur-2xl ${
+          isFixed ? "bg-transparent" : "bg-secondary"
+        }  -z-1`}
+      ></div>
+    </motion.header>
   );
 }
