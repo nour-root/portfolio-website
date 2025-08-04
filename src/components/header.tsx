@@ -52,7 +52,7 @@ export default function Header() {
           className={`absolute bg-primary -right-2 top-[42px] w-[10px] h-[10px] rounded-full`}
         ></div>
       </div>
-      <div className="min-w-[33.3%] h-fit flex items-center justify-center max-md:hidden">
+      <div className="min-w-fit h-fit flex items-center justify-center max-md:hidden">
         <ul
           className={`font-ovo text-foreground ${isDarkMode ? "border" : ""} ${
             isFixed ? "bg-transparent border-0" : "bg-background"
