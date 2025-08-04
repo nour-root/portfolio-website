@@ -6,23 +6,23 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="w-full flex flex-col gap-5 items-center py-20 px-24 text-center"
+      className="flex flex-col gap-5 items-center py-20 px-24 justify-center"
     >
-      <div className="w-full flex flex-col items-center justify-center gap-2">
+      <div className="flex flex-col items-center justify-center gap-2">
         <img
           src={`/images/aiony-haust-3TLl_97HNJo-unsplash.jpg`}
           alt=""
           className="w-[158px] h-[158px] rounded-full object-cover"
         />
-        <p className="font-ovo capitalize max-md:text-[26px] font-normal text-foreground text-center leading-10 text-[28px]">
+        <p className="font-ovo capitalize max-md:text-[25px] font-normal text-foreground text-center leading-10 text-[28px]">
           nour Mahmoud
         </p>
       </div>
       <div className="font-ovo">
-        <h1 className="text-[80px] max-md:text-[60px] font-normal leading-[85px] text-primary  capitalize">
+        <h1 className="text-[80px] max-md:text-[35px] text-nowrap font-normal leading-[85px] max-md:leading-normal text-primary  capitalize">
           frontend web developer.
         </h1>
-        <p className="text-[20px] w-[500px] mx-auto leading-10 text-foreground">
+        <p className="text-[20px] max-md:text-[16px] text-center mx-auto leading-10 text-foreground">
           I am a frontend developer from Syria.
         </p>
       </div>

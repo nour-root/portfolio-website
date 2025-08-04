@@ -38,7 +38,7 @@ export default function Header() {
   return (
     <motion.header
       ref={refHeader}
-      className={`px-20 max-md:px-6 py-2  z-0 flex items-center justify-between ${
+      className={`px-20 max-md:px-6 py-2 z-0 flex items-center justify-between ${
         isFixed
           ? "fixed w-full top-0 left-0 bg-background/50 backdrop-blur-xl z-50"
           : "relative"

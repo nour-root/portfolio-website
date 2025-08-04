@@ -24,7 +24,10 @@ export default function About() {
     },
   ];
   return (
-    <section id="about" className={`text-foreground py-20 px-24  space-y-16`}>
+    <section
+      id="about"
+      className={`text-foreground py-20 px-24 max-md:px-16  space-y-16`}
+    >
       <div className={`w-full text-center font-ovo space-y-3`}>
         <p className="text-2xl">Introduction</p>
         <p className={`text-6xl font-normal`}>About me</p>
