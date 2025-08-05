@@ -38,14 +38,14 @@ export default function Header() {
   return (
     <motion.header
       ref={refHeader}
-      className={`fixed w-full top-0 left-0 bg-background/50 backdrop-blur-xl z-50 px-20 max-md:px-6 py-2 flex items-center justify-between `}
+      className={`fixed w-full top-0 left-0 bg-background/50 backdrop-blur-xl z-50 px-20 max-md:px-6 py-2 max-md:py-3 flex items-center justify-between `}
     >
       <div className="h-fit w-fit relative">
-        <p className="text-foreground capitalize font-semibold text-[45px]">
+        <p className="relative text-foreground capitalize font-semibold text-[45px] max-sm:text-4xl">
           nour
         </p>
         <div
-          className={`absolute bg-primary -right-2 top-[42px] w-[10px] h-[10px] rounded-full`}
+          className={`absolute bg-primary -right-2 top-[42px] w-[10px] h-[10px] max-sm:top-[25px] rounded-full`}
         ></div>
       </div>
       <div className="min-w-fit h-fit flex items-center justify-center max-md:hidden">
