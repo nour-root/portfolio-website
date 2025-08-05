@@ -14,15 +14,15 @@ export default function Home() {
           alt=""
           className="w-[158px] h-[158px] rounded-full object-cover"
         />
-        <p className="font-ovo capitalize max-md:text-[25px] font-normal text-foreground text-center leading-10 text-[28px]">
+        <p className="font-ovo capitalize max-md:text-[20px] font-normal text-foreground text-center leading-10 text-[28px]">
           nour Mahmoud
         </p>
       </div>
       <div className="font-ovo">
-        <h1 className="text-[80px] text-center max-md:text-[35px] text-nowrap font-normal leading-[85px] max-md:leading-normal text-primary  capitalize">
+        <h1 className="text-[80px] text-center max-md:text-[30px] text-nowrap font-normal leading-[85px] max-md:leading-normal text-primary  capitalize">
           frontend web developer.
         </h1>
-        <p className="text-[20px] max-md:text-[16px] text-center mx-auto leading-10 text-foreground">
+        <p className="text-[20px] max-md:text-[14px] text-center mx-auto leading-10 text-foreground">
           I am a frontend developer from Syria.
         </p>
       </div>
