@@ -21,7 +21,7 @@ export default function Menu() {
       }`}
     >
       <div
-        className={`fixed w-1/2 h-full bg-background top-0 pl-12 pr-5 py-8 space-y-8 ${
+        className={`fixed w-1/2 h-full bg-background top-0 pl-8 pr-5 py-8 space-y-8 ${
           hidden
             ? "transition-all duration-300 right-[-50%]"
             : "transition-all duration-300 right-0"
@@ -31,7 +31,7 @@ export default function Menu() {
           <HiOutlineXMark onClick={() => setHidden(!hidden)} />
         </div>
         <ul
-          className="space-y-6 capitalize font-ovo *:cursor-pointer"
+          className=" *:py-3 capitalize font-ovo *:cursor-pointer"
           onClick={() => setHidden(!hidden)}
         >
           <li>

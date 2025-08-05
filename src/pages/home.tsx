@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="flex flex-col gap-5 items-center py-20 px-24 justify-center"
+      className="flex flex-col gap-5 items-center py-20 px-24 justify-center mt-18"
     >
       <div className="flex flex-col items-center justify-center gap-2">
         <img

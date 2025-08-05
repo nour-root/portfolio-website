@@ -29,7 +29,7 @@ export default function About() {
       className={`text-foreground py-20 px-24 max-md:px-16  space-y-16`}
     >
       <div className={`w-full text-center font-ovo space-y-3`}>
-        <p className="text-2xl">Introduction</p>
+        <h1 className="text-2xl">Introduction</h1>
         <p className={`text-6xl font-normal`}>About me</p>
       </div>
       <div className="w-full flex gap-20 justify-center items-start max-lg:flex-col max-lg:items-center">

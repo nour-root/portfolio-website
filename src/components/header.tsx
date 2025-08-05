@@ -17,7 +17,7 @@ export default function Header() {
   const [hidden, setHidden] = useAtom(btnMenu);
   const { scrollYProgress } = useScroll({
     target: refHeader,
-    offset: ["start end", "end start"],
+    offset: ["end start", "end start"],
   });
   useMotionValueEvent(scrollYProgress, "change", (progress) => {
     setIsFixed(progress >= 1);
@@ -38,11 +38,7 @@ export default function Header() {
   return (
     <motion.header
       ref={refHeader}
-      className={`px-20 max-md:px-6 py-2 z-0 flex items-center justify-between ${
-        isFixed
-          ? "fixed w-full top-0 left-0 bg-background/50 backdrop-blur-xl z-50"
-          : "relative"
-      } `}
+      className={`fixed w-full top-0 left-0 bg-background/50 backdrop-blur-xl z-50 px-20 max-md:px-6 py-2 flex items-center justify-between `}
     >
       <div className="h-fit w-fit relative">
         <p className="text-foreground capitalize font-semibold text-[45px]">
@@ -55,10 +51,8 @@ export default function Header() {
       <div className="min-w-fit h-fit flex items-center justify-center max-md:hidden">
         <ul
           className={`font-ovo max-md:hidden text-foreground ${
-            isDarkMode ? "border" : ""
-          } ${
-            isFixed ? "bg-transparent border-0" : "bg-background"
-          } gap-10 rounded-[100px] w-full flex items-center justify-between capitalize px-10 py-4`}
+            isFixed ? "bg-transparent" : ""
+          } bg-background gap-10 rounded-[100px] w-full flex items-center justify-between capitalize px-10 py-4`}
         >
           <Link to={`/#home`}>
             <li
@@ -74,11 +68,13 @@ export default function Header() {
               about me
             </li>
           </Link>
-          <li
-            className={`relative cursor-pointer z-0 before:absolute before:w-[calc(100%+20px)] before:h-full before:bg-transparent before:-z-10 before:-left-2 before:rounded-2xl before:blur-[9px] before:transition-all before:duration-200 hover:before:bg-accent `}
-          >
-            projects
-          </li>
+          <Link to={`/#work`}>
+            <li
+              className={`relative cursor-pointer z-0 before:absolute before:w-[calc(100%+20px)] before:h-full before:bg-transparent before:-z-10 before:-left-2 before:rounded-2xl before:blur-[9px] before:transition-all before:duration-200 hover:before:bg-accent `}
+            >
+              projects
+            </li>
+          </Link>
           <li
             className={`relative cursor-pointer z-0 before:absolute before:w-[calc(100%+20px)] before:h-full before:bg-transparent before:-z-10 before:-left-2 before:rounded-2xl before:blur-[9px] before:transition-all before:duration-200 hover:before:bg-accent `}
           >
