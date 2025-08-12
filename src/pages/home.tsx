@@ -18,11 +18,11 @@ export default function Home() {
           nour Mahmoud
         </p>
       </div>
-      <div className="font-ovo">
-        <h1 className="text-[80px] text-center max-md:text-[30px] text-nowrap font-normal leading-[85px] max-md:leading-normal text-primary  capitalize">
+      <div className="font-ovo w-full">
+        <h1 className="text-[80px] text-center max-md:text-[40px] text-wrap font-normal leading-[85px] max-md:leading-normal max-md:tracking-tight text-primary  capitalize">
           frontend web developer.
         </h1>
-        <p className="text-[20px] max-md:text-[14px] text-center mx-auto leading-10 text-foreground">
+        <p className="text-[20px] max-md:text-[16px] text-center mx-auto leading-10 text-foreground">
           I am a frontend developer from Syria.
         </p>
       </div>
