@@ -75,11 +75,13 @@ export default function Header() {
               projects
             </li>
           </Link>
-          <li
-            className={`relative cursor-pointer z-0 before:absolute before:w-[calc(100%+20px)] before:h-full before:bg-transparent before:-z-10 before:-left-2 before:rounded-2xl before:blur-[9px] before:transition-all before:duration-200 hover:before:bg-accent `}
-          >
-            contact me
-          </li>
+          <Link to={"/#contact"}>
+            <li
+              className={`relative cursor-pointer z-0 before:absolute before:w-[calc(100%+20px)] before:h-full before:bg-transparent before:-z-10 before:-left-2 before:rounded-2xl before:blur-[9px] before:transition-all before:duration-200 hover:before:bg-accent `}
+            >
+              contact me
+            </li>
+          </Link>
         </ul>
       </div>
       <div className="flex items-center gap-6">

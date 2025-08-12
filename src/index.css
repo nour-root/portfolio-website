@@ -91,7 +91,7 @@
   --secondary-foreground: oklch(0.92 0.006 6.749501710247358);
   --muted: oklch(0.259 0.02 8.561477408421824);
   --muted-foreground: oklch(0.706 0.032 7.734936864127324);
-  --accent: oklch(0.692 0.047 59.30238218164661);
+  --accent: oklch(82.363% 0.03945 60.825);
   --accent-foreground: oklch(0.22 0.019 58.99919754996334);
   --destructive: oklch(0.529 0.195 27.156747692001183);
   --border: oklch(0.422 0.019 59.65008086388564);
@@ -120,11 +120,3 @@
     @apply bg-background text-foreground;
   }
 }
-/* .moon {
-  transform: rotate(360deg) scale(0);
-  transition: 1s ease;
-}
-.sun {
-  transform: scale(1) rotate(360deg);
-  transition: 1s ease;
-} */

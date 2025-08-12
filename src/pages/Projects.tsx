@@ -1,7 +1,4 @@
 import Card1 from "@/components/card1";
-import { Button } from "@/components/ui/button";
-import { IoIosArrowRoundForward } from "react-icons/io";
-
 export default function Projects() {
   return (
     <section
@@ -23,15 +20,6 @@ export default function Projects() {
         <Card1 />
         <Card1 />
         <Card1 />
-      </div>
-      <div className="w-full mt-20">
-        <Button
-          className={`mx-auto rounded-4xl has-[>svg]:px-6 py-6 md:py-7 bg-transparent flex items-center gap-3 cursor-pointer`}
-          variant={"outline"}
-        >
-          <p className="md:text-lg">Show more</p>
-          <IoIosArrowRoundForward className="size-6 mt-1" />
-        </Button>
       </div>
     </section>
   );
